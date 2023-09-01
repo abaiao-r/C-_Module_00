@@ -6,7 +6,7 @@
 #    By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/30 18:27:51 by abaiao-r          #+#    #+#              #
-#    Updated: 2023/08/31 19:04:15 by abaiao-r         ###   ########.fr        #
+#    Updated: 2023/09/01 17:48:21 by abaiao-r         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ OBJS = 	$(SRCS:$(SRCDIR)/%.cpp=$(OBJDIR)/%.o)
 
 
 # Targets
-NAME = megaphone
+NAME = phonebook
 
 all: 	$(NAME)
 

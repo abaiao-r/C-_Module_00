@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 14:20:06 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/08/31 19:28:34 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/09/01 20:08:35 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void display_menu(void)
     std::cout << "ADD" << std::endl;
     std::cout << "SEARCH" << std::endl;
     std::cout << "EXIT" << std::endl;
+    std::cout << ">> " << std::flush;
 }
 
 int main(int ac, char **av)
@@ -27,25 +28,26 @@ int main(int ac, char **av)
 
     (void)av;
     if(ac != 1)
-        std::cout << "Error!: Too many arguments!\n Usage: ./PhoneBook" << std::endl;
+        std::cout << "Error!: Too many arguments!\nUsage: ./PhoneBook" << std::endl;
     else
     {
         while(1)
         {
-            std::cout << "PhoneBook> ";
+            std::cout << "PhoneBook> " << std::flush;
             display_menu();
             std::getline(std::cin, input);
-            std::cin.clear();
+            if(std::cin.eof())
+                return (1);
             if(input == "EXIT")
             {
                 std::cout << "Exiting..." << std::endl;
                 break;
             }
             else if(input == "ADD")
-                add_contact(phonebook);
+                phonebook.add_contact();
             else if(input == "SEARCH")
-                search_contact(phonebook);
-            else
+                phonebook.search_contact();
+           else
                 std::cout << "Error!: Invalid command!" << std::endl;
         }
     }

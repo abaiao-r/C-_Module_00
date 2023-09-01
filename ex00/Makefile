@@ -6,13 +6,13 @@
 #    By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/30 18:27:51 by abaiao-r          #+#    #+#              #
-#    Updated: 2023/08/30 18:54:37 by abaiao-r         ###   ########.fr        #
+#    Updated: 2023/08/31 19:04:19 by abaiao-r         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Compiler settings	
-COMPILER = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -g 
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g 
 
 # Directories
 SRCDIR = src
@@ -22,7 +22,7 @@ OBJDIR = objs
 
 SRCS = 	$(SRCDIR)/megaphone.cpp
 
-OBJS = 	$(SRCS:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
+OBJS = 	$(SRCS:$(SRCDIR)/%.cpp=$(OBJDIR)/%.o)
 
 
 # Targets
@@ -49,15 +49,15 @@ test: 	fclean all
 
 
 $(NAME): 	$(OBJS)
-			$(COMPILER) $(OBJS) $(CFLAGS) -o  $(NAME) 
+			$(CXX) $(OBJS) $(CXXFLAGS) -o  $(NAME) 
 
-%.o: %.c
-	$(COMPILER) -Wall -Wextra -Werror -c $< -o $@ 
+%.o: %.cpp
+	$(CXX) -Wall -Wextra -Werror -c $< -o $@ 
 
 $(OBJDIR):
 	mkdir -p $(OBJDIR)
 
-$(OBJDIR)/%.o: $(SRCDIR)/%.c | $(OBJDIR)
-	$(COMPILER) $(CFLAGS) -c $< -o $@
+$(OBJDIR)/%.o: $(SRCDIR)/%.cpp | $(OBJDIR)
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 .PHONY: all clean fclean re run test

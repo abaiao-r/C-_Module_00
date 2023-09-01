@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 16:49:39 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/08/31 19:28:52 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/09/01 15:56:18 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,16 @@ Contact::Contact(void)
 
 Contact::~Contact(void)
 {
+}
+
+Contact &Contact::operator=(Contact const &copy)
+{
+    this->first_name = copy.first_name;
+    this->last_name = copy.last_name;
+    this->nickname = copy.nickname;
+    this->phone_number = copy.phone_number;
+    this->darkest_secret = copy.darkest_secret;
+    return (*this);
 }
 
 void Contact::set_first_name(std::string first_name)

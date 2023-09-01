@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 16:28:40 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/08/31 18:02:47 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/09/01 16:36:51 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class Contact
   public:
 	Contact(void);
 	~Contact(void);
+	Contact &operator=(Contact const &copy);
 	void set_first_name(std::string first_name);
 	void set_last_name(std::string last_name);
 	void set_nickname(std::string nickname);
