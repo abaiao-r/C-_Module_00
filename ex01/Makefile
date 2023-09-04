@@ -6,7 +6,7 @@
 #    By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/30 18:27:51 by abaiao-r          #+#    #+#              #
-#    Updated: 2023/09/01 17:48:21 by abaiao-r         ###   ########.fr        #
+#    Updated: 2023/09/04 17:32:57 by abaiao-r         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ OBJDIR = objs
 
 SRCS = 	$(SRCDIR)/main.cpp \
 		$(SRCDIR)/Contact.cpp \
-		$(SRCDIR)/PhoneBook.cpp
+		$(SRCDIR)/PhoneBook.cpp \
+		$(SRCDIR)/utils.cpp
 
 OBJS = 	$(SRCS:$(SRCDIR)/%.cpp=$(OBJDIR)/%.o)
 

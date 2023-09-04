@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 17:05:50 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/09/01 20:06:04 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/09/04 17:27:13 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,18 @@
 #include <iomanip> // std::setw
 #include <cstdlib> // std::system, std::exit
 # include "Contact.hpp"
+# include "utils.hpp"
 
 /* Colors */
 
 # define ORIGINAL		"\e[0m"
 # define RED			"\e[0;31m"
-# define L_RED			"\e[0;38;5;9m"
 # define GREEN			"\e[0;32m"
-# define D_GREEN		"\e[0;38;5;22m"
+# define YELLOW			"\e[0;33m"
+# define BLUE			"\e[0;34m"
+# define MAGENTA		"\e[0;35m"
+# define CYAN			"\e[0;36m"
+
 
 class PhoneBook
 {
@@ -36,11 +40,13 @@ class PhoneBook
   public:
     PhoneBook(void);
     ~PhoneBook(void);
-    std::string get_valid_index(std::string prompt, int index);
+    int get_valid_index(std::string prompt);
     std::string get_valid_input(std::string prompt);
     std::string get_valid_phone_nbr(std::string prompt);
     Contact create_contact(void);
     void add_contact(void);
+    void search_and_display_contact(void);
+    void display_contact_list(void);
     int search_contact(void);
 };
 
