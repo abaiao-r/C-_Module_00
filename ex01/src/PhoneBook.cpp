@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 17:14:53 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/09/01 20:12:12 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/09/04 15:54:01 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int PhoneBook::search_contact(void)
 
     std::cout << "     Index|First Name| Last Name|  Nickname" << std::endl;
     i = 0;
-    while(i < this->index)
+    while(i < 8 && this->contacts[i].get_first_name() != "")
     {
         std::cout << std::setw(10) << i << "|";
         first_name = this->contacts[i].get_first_name();
