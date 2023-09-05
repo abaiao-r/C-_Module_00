@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 17:11:48 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/09/04 17:36:12 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/09/05 18:27:29 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ std::string get_input(std::string prompt)
 	std::cin.clear();
 	std::getline(std::cin, input);
 	if (std::cin.eof())
-		exit(0);
+	{
+		std::cout << std::endl;
+		std::exit(0);
+	}
 	return (input);
 }
 

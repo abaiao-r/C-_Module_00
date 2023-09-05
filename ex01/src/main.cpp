@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 14:20:06 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/09/04 17:37:22 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/09/05 18:32:02 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 static void display_menu(void)
 {
-    std::cout << BLUE << "Please type one of the following commands:" << std::endl;
+    std::cout << BLUE << "Please type one of the following commands:" 
+        << std::endl;
     std::cout << MAGENTA << "ADD" << std::endl;
     std::cout << "SEARCH" << std::endl;
     std::cout << "EXIT" << std::endl;
@@ -28,7 +29,10 @@ int main(int ac, char **av)
 
     (void)av;
     if(ac != 1)
-        std::cout << "Error!: Too many arguments!\nUsage: ./PhoneBook" << std::endl;
+    {
+        std::cout << "Error!: Too many arguments!\nUsage: ./PhoneBook" 
+            << std::endl;
+    }
     else
     {
         while(1)
@@ -37,7 +41,10 @@ int main(int ac, char **av)
             display_menu();
             std::getline(std::cin, input);
             if(std::cin.eof())
+            {
+                std::cout << std::endl;
                 return (1);
+            }
             if(input == "EXIT")
             {
                 std::cout << CYAN << "Exiting..." << ORIGINAL << std::endl;
@@ -48,7 +55,10 @@ int main(int ac, char **av)
             else if(input == "SEARCH")
                 phonebook.search_contact();
            else
-                std::cout << RED << "Error!: Invalid command!" << ORIGINAL << std::endl;
+           {
+                std::cout << RED << "Error!: Invalid command!" 
+                    << ORIGINAL << std::endl;
+           }
         }
     }
     return (0);

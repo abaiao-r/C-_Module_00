@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 17:14:53 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/09/05 14:13:35 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/09/05 18:29:02 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,11 +61,12 @@ void PhoneBook::search_and_display_contact(void)
 	if (this->contacts[0].get_first_name() == "")
 	{
 		std::cout << RED << "     No contacts to display." << ORIGINAL 
-		<< std::endl;
+			<< std::endl;
 		return ;
 	}
 	select_index = -1;
-	select_index = get_valid_index("Please enter the index of the contact you wish to view: ");
+	select_index = get_valid_index(
+		"Please enter the index of the contact you wish to view: ");
 	std::cout << BLUE << "Contact details for index " << select_index << ":" 
 		<< ORIGINAL << std::endl;
 	this->contacts[select_index].display_contact();
@@ -174,5 +175,5 @@ void PhoneBook::add_contact(void)
 	this->contacts[this->index] = newContact;
 	this->index++;
 	std::cout << GREEN << "Contact added successfully!" << ORIGINAL 
-	<< std::endl;
+		<< std::endl;
 }
