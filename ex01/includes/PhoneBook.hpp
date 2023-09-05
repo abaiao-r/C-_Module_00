@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 17:05:50 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/09/04 17:27:13 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/09/05 14:14:20 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@
 # include "Contact.hpp"
 # include "utils.hpp"
 
-/* Colors */
-
+/* Colours */
 # define ORIGINAL		"\e[0m"
 # define RED			"\e[0;31m"
 # define GREEN			"\e[0;32m"
@@ -38,8 +37,13 @@ class PhoneBook
     
 
   public:
+    // Constructor
     PhoneBook(void);
+
+    // Destructor
     ~PhoneBook(void);
+
+    // Methods
     int get_valid_index(std::string prompt);
     std::string get_valid_input(std::string prompt);
     std::string get_valid_phone_nbr(std::string prompt);

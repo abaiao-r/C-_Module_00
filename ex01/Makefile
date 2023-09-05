@@ -6,7 +6,7 @@
 #    By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/30 18:27:51 by abaiao-r          #+#    #+#              #
-#    Updated: 2023/09/04 17:32:57 by abaiao-r         ###   ########.fr        #
+#    Updated: 2023/09/04 21:32:04 by abaiao-r         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,6 @@ re:		fclean all
 
 test: 	fclean all
 		./$(NAME) Too many arguments
-		./$(NAME)
 
 
 $(NAME): 	$(OBJS)
