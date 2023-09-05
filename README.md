@@ -80,9 +80,8 @@ Remember to replace `"path/to/exercise_folder"` with the actual path to the fold
 
     ```bash
     ./megaphone "shhhhh... I think the students are asleep..."
-
-5. **Run the program without arguments **
-
+    ```
+    
     ```bash
     ./megaphone
 
