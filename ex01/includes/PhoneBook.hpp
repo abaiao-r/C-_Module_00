@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 17:05:50 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/09/05 14:14:20 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/09/06 14:23:57 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ class PhoneBook
     // Destructor
     ~PhoneBook(void);
 
-    // Methods
+    // Methods or member functions
     int get_valid_index(std::string prompt);
     std::string get_valid_input(std::string prompt);
     std::string get_valid_phone_nbr(std::string prompt);
