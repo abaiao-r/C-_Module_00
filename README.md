@@ -1,9 +1,6 @@
 # C++ Module 00 Project 
 
-<div style="text-align: center;">
   <img src="cpp_logo.png" alt="C++ Logo" width="100" height="100">
-</div>
-
 
 ## Table of Contents
 
