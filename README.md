@@ -1,12 +1,15 @@
 # C++ Module 00 Project 
 
-![C++ Logo](cpp_logo.png)
+<div style="text-align: center;">
+  <img src="cpp_logo.png" alt="C++ Logo" width="100" height="100">
+</div>
+
 
 ## Table of Contents
 
 - [Introduction](#introduction)
 - [Key Concepts](#Key-Concepts-Demonstrated)
-- [Why It`s Relevant](#Why-It's-Relevant)
+- [Why It's Relevant](#Why-It's-Relevant)
 - [Exercise 01: My Awesome PhoneBook](#exercise-01-my-awesome-phonebook)
 - [Exercise 02: The Job Of Your Dreams](#exercise-02-the-job-of-your-dreams)
 - [Conclusion](#conclusion)
